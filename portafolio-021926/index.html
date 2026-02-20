@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-4.0.0.js"
+      integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Portafolio | Milton</title>
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.5s ease-out forwards;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-50 text-gray-900 dark:bg-black dark:text-white font-sans antialiased transition-colors duration-300"
+  >
+    <nav
+      class="bg-white/90 dark:bg-black/90 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-200 dark:border-gray-800 transition-colors duration-300"
+    >
+      <div
+        class="container mx-auto px-4 h-16 flex items-center justify-between"
+      >
+        <a
+          href="https://www.instagram.com/vorticsworkshop_slp/?e=38c04fa4-0185-404a-ada2-e761bb5669f8&g=5"
+          target="_blank"
+          class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-500 bg-clip-text text-transparent"
+        >
+          VorTics-Dev 2026
+        </a>
+
+        <div class="flex items-center gap-4 text-gray-600 dark:text-gray-400">
+          <i
+            class="fa-solid fa-earth-americas hover:text-blue-500 dark:hover:text-white cursor-pointer transition"
+          ></i>
+
+          <div class="flex items-center gap-2 ml-2">
+            <i class="fa-solid fa-sun text-yellow-500 text-lg"></i>
+
+            <div
+              class="relative inline-block w-12 align-middle select-none transition duration-200 ease-in"
+            >
+              <input
+                type="checkbox"
+                name="toggle"
+                id="theme-toggle"
+                class="toggle-checkbox absolute block w-5 h-5 rounded-full bg-white border-4 border-gray-300 dark:border-gray-700 appearance-none cursor-pointer transition-transform duration-300 ease-in-out translate-x-0 dark:translate-x-6 z-10"
+              />
+              <label
+                for="theme-toggle"
+                class="toggle-label block overflow-hidden h-6 w-12 rounded-full bg-gray-300 dark:bg-gray-700 cursor-pointer"
+              ></label>
+            </div>
+
+            <i class="fa-solid fa-moon text-blue-300 text-lg"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8 space-y-6">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 animate-fade-in">
+        <div
+          class="lg:col-span-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-8 rounded-2xl shadow-sm dark:shadow-lg flex flex-col justify-center transition-colors duration-300"
+        >
+          <span
+            class="text-blue-600 dark:text-blue-500 font-semibold tracking-wide text-sm uppercase"
+          >
+            Desarrollador Jr. | Área de Ciencias de la Computación
+          </span>
+          <h1 class="text-4xl md:text-5xl font-bold mt-2 mb-4">
+            Milton Torres
+          </h1>
+          <p
+            class="text-gray-600 dark:text-gray-400 text-lg mb-6 leading-relaxed"
+          >
+            Combino mi formación en metodologías de software con la creación de
+            experiencias digitales modernas de aplicaciones web/móviles y uso de
+            otras tecnologías para el entretenimiento y el desarrollo.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <button
+              id="openContactModal"
+              class="px-6 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition shadow-blue-900/20 shadow-lg"
+            >
+              Contactar
+            </button>
+            <button
+              class="px-6 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition text-gray-700 dark:text-gray-300"
+            >
+              Ver Proyectos en GitHub <i class="fa-brands fa-github ml-2"></i>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-8 rounded-2xl shadow-sm dark:shadow-lg flex flex-col justify-between space-y-6 transition-colors duration-300"
+        >
+          <div
+            class="text-gray-800 dark:text-gray-200 font-semibold text-lg border-b border-gray-200 dark:border-gray-800 pb-2"
+          >
+            Estadísticas
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center mb-1">
+              <span class="text-3xl font-bold text-cyan-500 dark:text-cyan-400"
+                >10+</span
+              >
+              <i
+                class="fa-solid fa-laptop-code text-cyan-500 dark:text-cyan-400 text-xl"
+              ></i>
+            </div>
+            <span class="text-gray-600 dark:text-gray-500 text-sm font-medium"
+              >Proyectos Académicos y Personales</span
+            >
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center mb-1">
+              <span
+                class="text-3xl font-bold text-green-500 dark:text-green-400"
+                >8º</span
+              >
+              <i
+                class="fa-solid fa-graduation-cap text-green-500 dark:text-green-400 text-xl"
+              ></i>
+            </div>
+            <span class="text-gray-600 dark:text-gray-500 text-sm font-medium"
+              >Semestre en Ingeniería (UASLP)</span
+            >
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center mb-1">
+              <span
+                class="text-3xl font-bold text-purple-500 dark:text-purple-400"
+                >3</span
+              >
+              <i
+                class="fa-solid fa-layer-group text-purple-500 dark:text-purple-400 text-xl"
+              ></i>
+            </div>
+            <span class="text-gray-600 dark:text-gray-500 text-sm font-medium"
+              >Áreas de Énfasis</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+        <div
+          class="lg:col-span-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6 rounded-2xl transition-colors duration-300 shadow-sm dark:shadow-none flex flex-col h-full"
+        >
+          <div class="w-full flex-grow relative min-h-[220px] mb-6">
+            <img
+              src="https://amanecerhuasteco.com/portal/wp-content/uploads/2018/11/6-11-18-34-SEMANA-DE-LA-FACULTAD-DE-INGENIERIA-Panorama2.jpg"
+              alt="Sistema de Control - Área Agroindustrial UASLP"
+              class="absolute inset-0 w-full h-full object-cover rounded-xl shadow-md"
+            />
+          </div>
+
+          <div class="flex-shrink-0">
+            <h2 class="text-2xl font-bold mb-2">
+              Sistema de Control de Prácticas y Talleres - Área Agroindustrial
+              UASLP
+            </h2>
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+              Aplicación web integral para gestionar prácticas, talleres,
+              inventario y reportes del área Agroindustrial. Optimiza tiempos,
+              reduce el uso de papel y centraliza el control, incorporando
+              validación estricta de datos institucionales.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6 rounded-2xl transition-colors duration-300 shadow-sm dark:shadow-none flex flex-col h-full"
+        >
+          <h3
+            class="text-lg font-semibold mb-4 border-b border-gray-100 dark:border-gray-800 pb-2"
+          >
+            Stack y Herramientas
+          </h3>
+
+          <div class="grid grid-cols-2 gap-x-2 gap-y-4 flex-grow content-start">
+            <div class="flex flex-col gap-1">
+              <span
+                class="text-[9px] text-gray-400 uppercase tracking-wider font-bold px-1 mb-1"
+                >Frontend / Móvil</span
+              >
+              <div
+                class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+              >
+                <i
+                  class="fa-brands fa-js text-yellow-500 dark:text-yellow-400 text-[15px] w-5 text-center"
+                ></i>
+                <span
+                  class="text-gray-700 dark:text-gray-300 text-xs font-medium"
+                  >JS / HTML / CSS</span
+                >
+              </div>
+              <div
+                class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+              >
+                <i
+                  class="fa-solid fa-mobile-screen text-cyan-500 text-[15px] w-5 text-center"
+                ></i>
+                <span
+                  class="text-gray-700 dark:text-gray-300 text-xs font-medium"
+                  >Dart & Flutter</span
+                >
+              </div>
+              <div
+                class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+              >
+                <i
+                  class="fa-solid fa-wind text-teal-400 text-[15px] w-5 text-center"
+                ></i>
+                <span
+                  class="text-gray-700 dark:text-gray-300 text-xs font-medium"
+                  >Tailwind CSS</span
+                >
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-1">
+              <span
+                class="text-[9px] text-gray-400 uppercase tracking-wider font-bold px-1 mb-1"
+                >Backend / Core</span
+              >
+              <div
+                class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+              >
+                <i
+                  class="fa-brands fa-php text-indigo-500 dark:text-indigo-400 text-[15px] w-5 text-center"
+                ></i>
+                <span
+                  class="text-gray-700 dark:text-gray-300 text-xs font-medium"
+                  >PHP & MySQL</span
+                >
+              </div>
+              <div
+                class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+              >
+                <i
+                  class="fa-brands fa-python text-yellow-500 text-[15px] w-5 text-center"
+                ></i>
+                <span
+                  class="text-gray-700 dark:text-gray-300 text-xs font-medium"
+                  >Python</span
+                >
+              </div>
+              <div
+                class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+              >
+                <i
+                  class="fa-solid fa-c text-blue-600 text-[15px] w-5 text-center"
+                ></i>
+                <span
+                  class="text-gray-700 dark:text-gray-300 text-xs font-medium"
+                  >C++</span
+                >
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-1">
+              <span
+                class="text-[9px] text-gray-400 uppercase tracking-wider font-bold px-1 mb-1"
+                >Entornos / Diseño</span
+              >
+              <div
+                class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+              >
+                <i
+                  class="fa-solid fa-code text-blue-500 text-[15px] w-5 text-center"
+                ></i>
+                <span
+                  class="text-gray-700 dark:text-gray-300 text-xs font-medium"
+                  >VS Code</span
+                >
+              </div>
+              <div
+                class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+              >
+                <i
+                  class="fa-brands fa-android text-green-500 text-[15px] w-5 text-center"
+                ></i>
+                <span
+                  class="text-gray-700 dark:text-gray-300 text-xs font-medium"
+                  >Android Studio</span
+                >
+              </div>
+              <div
+                class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+              >
+                <i
+                  class="fa-brands fa-figma text-purple-500 text-[15px] w-5 text-center"
+                ></i>
+                <span
+                  class="text-gray-700 dark:text-gray-300 text-xs font-medium"
+                  >Figma</span
+                >
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-1">
+              <span
+                class="text-[9px] text-gray-400 uppercase tracking-wider font-bold px-1 mb-1"
+                >Workflow / 3D</span
+              >
+              <div
+                class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+              >
+                <i
+                  class="fa-brands fa-git-alt text-orange-500 text-[15px] w-5 text-center"
+                ></i>
+                <span
+                  class="text-gray-700 dark:text-gray-300 text-xs font-medium"
+                  >Git & GitHub</span
+                >
+              </div>
+              <div
+                class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+              >
+                <i
+                  class="fa-brands fa-docker text-blue-400 text-[15px] w-5 text-center"
+                ></i>
+                <span
+                  class="text-gray-700 dark:text-gray-300 text-xs font-medium"
+                  >Docker</span
+                >
+              </div>
+              <div
+                class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+              >
+                <i
+                  class="fa-solid fa-list-check text-green-500 text-[15px] w-5 text-center"
+                ></i>
+                <span
+                  class="text-gray-700 dark:text-gray-300 text-xs font-medium"
+                  >ClickUp</span
+                >
+              </div>
+              <div
+                class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+              >
+                <i
+                  class="fa-solid fa-cube text-orange-400 text-[15px] w-5 text-center"
+                ></i>
+                <span
+                  class="text-gray-700 dark:text-gray-300 text-xs font-medium"
+                  >Blender (3D)</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div
+          class="bg-gradient-to-br from-gray-100 to-white dark:from-gray-900 dark:to-gray-800 border border-gray-200 dark:border-gray-700 p-6 rounded-2xl hover:border-blue-400 dark:hover:border-blue-500/50 transition duration-300 shadow-sm dark:shadow-none flex flex-col h-full"
+        >
+          <div class="flex justify-between items-start mb-4">
+            <h2 class="text-xl font-bold">I+D / Sandbox Técnico</h2>
+            <span
+              class="bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 text-xs px-2 py-1 rounded-full"
+              ><i class="fa-solid fa-microchip"></i
+            ></span>
+          </div>
+          <p
+            class="text-gray-600 dark:text-gray-400 text-sm flex-grow leading-relaxed"
+          >
+            Espacio de innovación enfocado en la investigación técnica y el
+            desarrollo experimental. Realizo pruebas de concepto (PoC) con
+            tecnologías emergentes, integración de hardware/software, y
+            prototipado para aportar soluciones creativas a problemas complejos.
+          </p>
+        </div>
+
+        <div
+          class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6 rounded-2xl transition-colors duration-300 shadow-sm dark:shadow-none flex flex-col h-full"
+        >
+          <div class="mb-4 text-green-500 dark:text-green-400">
+            <i class="fa-solid fa-tasks text-2xl"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Gestión y Metodologías</h3>
+          <p
+            class="text-gray-600 dark:text-gray-400 text-sm flex-grow leading-relaxed"
+          >
+            Implementación de metodologías ágiles para la administración
+            eficiente del ciclo de vida del software. Enfoque riguroso en la
+            planificación estructurada, gestión de requerimientos, cumplimiento
+            de sprints y entrega continua de valor.
+          </p>
+        </div>
+
+        <div
+          class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6 rounded-2xl transition-colors duration-300 shadow-sm dark:shadow-none flex flex-col h-full"
+        >
+          <div class="mb-4 text-purple-600 dark:text-purple-400">
+            <i class="fa-solid fa-users-rays text-2xl"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Hard / Soft Skills</h3>
+          <p
+            class="text-gray-600 dark:text-gray-400 text-sm flex-grow leading-relaxed"
+          >
+            Combinación de bases técnicas sólidas con una gran capacidad de
+            autoaprendizaje. Me destaco por mi resiliencia en la resolución de
+            problemas lógicos, adaptabilidad técnica, comunicación asertiva y
+            disposición para el trabajo colaborativo.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="contactModal"
+      class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/60 backdrop-blur-sm transition-opacity"
+    >
+      <div
+        class="bg-white dark:bg-gray-900 w-full max-w-md p-6 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 relative m-4"
+      >
+        <button
+          id="closeContactModal"
+          class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 dark:hover:text-white transition"
+        >
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+
+        <h2 class="text-2xl font-bold mb-2 text-gray-900 dark:text-white">
+          <i class="fa-solid fa-envelope text-blue-500 mr-2"></i> Contáctame
+        </h2>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
+          Completa el formulario y me pondré en contacto contigo.
+        </p>
+
+        <form id="contactForm" class="space-y-4">
+          <div>
+            <label
+              class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1"
+              for="contactName"
+              >Nombre</label
+            >
+            <input
+              type="text"
+              id="contactName"
+              class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Tu nombre"
+              required
+            />
+          </div>
+          <div>
+            <label
+              class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1"
+              for="contactEmail"
+              >Correo Electrónico</label
+            >
+            <input
+              type="email"
+              id="contactEmail"
+              class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="tu@correo.com"
+              required
+            />
+          </div>
+          <div>
+            <label
+              class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1"
+              for="contactMessage"
+              >Asunto / Mensaje</label
+            >
+            <textarea
+              id="contactMessage"
+              rows="4"
+              class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Escribe tu mensaje..."
+              required
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg shadow-lg transition-all active:scale-95 flex justify-center items-center gap-2"
+          >
+            Enviar <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const toggleCheckbox = document.getElementById("theme-toggle");
+      const htmlElement = document.documentElement;
+
+      toggleCheckbox.checked = false;
+
+      toggleCheckbox.addEventListener("change", (e) => {
+        if (e.target.checked) {
+          htmlElement.classList.remove("dark");
+        } else {
+          htmlElement.classList.add("dark");
+        }
+      });
+
+      $(document).ready(function () {
+        $("#openContactModal").click(function () {
+          $("#contactModal").removeClass("hidden");
+        });
+
+        $("#closeContactModal").click(function () {
+          $("#contactModal").addClass("hidden");
+        });
+
+        $("#contactModal").click(function (e) {
+          if (e.target === this) {
+            $(this).addClass("hidden");
+          }
+        });
+
+        $("#contactForm").on("submit", function (e) {
+          e.preventDefault();
+
+          const $submitBtn = $(this).find('button[type="submit"]');
+          const originalBtnHTML = $submitBtn.html();
+
+          $submitBtn
+            .html('Enviando... <i class="fa-solid fa-spinner fa-spin"></i>')
+            .prop("disabled", true);
+
+          const payload = {
+            nombre: $("#contactName").val(),
+            correo: $("#contactEmail").val(),
+            asunto: $("#contactMessage").val(),
+          };
+
+          const apiUrl =
+            "https://diane-domesticable-eliz.ngrok-free.dev/enviar";
+          const proxyUrl =
+            "https://corsproxy.io/?" + encodeURIComponent(apiUrl);
+
+          $.ajax({
+            url: proxyUrl,
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify(payload),
+            headers: {
+              "ngrok-skip-browser-warning": "69420",
+            },
+            success: function (response) {
+              alert("¡Mensaje enviado con éxito!");
+              $("#contactForm")[0].reset();
+              $("#contactModal").addClass("hidden");
+            },
+            error: function (xhr, status, error) {
+              console.error(error);
+              alert("Hubo un problema al enviar el mensaje.");
+            },
+            complete: function () {
+              $submitBtn.html(originalBtnHTML).prop("disabled", false);
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
